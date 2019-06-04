@@ -11,6 +11,7 @@ export class User{
     loanTerm: number;
     creditHistory: number;
     area: string;
+
     
 }
 

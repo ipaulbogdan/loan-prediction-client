@@ -1,4 +1,94 @@
-<p>
-  get-prediction works!
-</p>
-<button mat-button (click)="get_prediction()">Click me!</button>
+<form autocomplete="off" class="myForm" method="POST" #f="ngForm" (submit)="f.form.valid && get_prediciton()" >
+  <mat-card class="myCard">
+      <mat-form-field class="field">
+      <mat-select placeholder="Gender" required [(ngModel)]="user.gender" name="gender" #name="ngModel">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Marital status" required [(ngModel)]="user.married" name="married" #name="ngModel">
+        <mat-option value="Yes">Yes</mat-option>
+        <mat-option value="No">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Dependends" required [(ngModel)]="user.dependends" name="dependends" #name="ngModel">
+        <mat-option value="0">0</mat-option>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3+">3+</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Educaton"  required [(ngModel)]="user.education" name="education" #name="ngModel">
+        <mat-option value="Graduate">Graduate</mat-option>
+        <mat-option value="Not Graduate">Not Graduate</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Self employed" required [(ngModel)]="user.self_employed" name="self_employed" #name="ngModel">
+        <mat-option value="Yes">Yes</mat-option>
+        <mat-option value="No">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <input matInput placeholder="Monthly income"
+            [(ngModel)]="user.income"
+            name="income"
+            #name="ngModel"
+            required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <input matInput placeholder="Co-applicant monthly income"
+          [(ngModel)]="user.coIncome"
+          name="coIncome"
+          #name="ngModel"
+          required>
+    </mat-form-field> 
+    <br>
+    <mat-form-field class="field">
+      <input matInput placeholder="Loan amount"
+          [(ngModel)]="user.loanAmount"
+          name="loanAmount"
+          #name="ngModel"
+          required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <input matInput placeholder="Loan term"
+          [(ngModel)]="user.loanTerm"
+          name="loanTerm"
+          #name="ngModel"
+          required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Credit history" required [(ngModel)]="user.creditHistory" name="credit" #name="ngModel">
+          <mat-option value="1">Good</mat-option>
+          <mat-option value="0">Bad</mat-option>
+          <mat-option value="-1">Unknown</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="field">
+      <mat-select placeholder="Living area" required [(ngModel)]="user.area" name="area" #name="ngModel">
+        <mat-option value="Urban">Urban</mat-option>
+        <mat-option value="Semiurban">Semiurban</mat-option>
+        <mat-option value="Rural">Rural</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <button class="btn btn-primary" type="submit" name="send_request" >Submit</button>
+  </mat-card>
+</form>
+
+
+
+
