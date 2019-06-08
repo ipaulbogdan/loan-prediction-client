@@ -6,8 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetPredictionComponent } from './get-prediction/get-prediction.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule,MatInputModule, MatSelectModule, MatCardModule,MatProgressSpinnerModule} from '@angular/material';
+import {MatFormFieldModule,MatInputModule, MatSelectModule, MatCardModule,MatProgressSpinnerModule, MatDialogModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ResponsePopupComponent } from './response-popup/response-popup.component';
 
 
 
@@ -21,7 +22,8 @@ const appRoutes: Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    GetPredictionComponent
+    GetPredictionComponent,
+    ResponsePopupComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,9 @@ const appRoutes: Routes=[
     BrowserAnimationsModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatDialogModule
   ],
+  entryComponents:[ResponsePopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

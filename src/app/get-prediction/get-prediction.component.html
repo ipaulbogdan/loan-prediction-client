@@ -1,4 +1,4 @@
-<form autocomplete="off" class="myForm" method="POST" #f="ngForm" (submit)="f.form.valid && get_prediciton()" >
+<form autocomplete="off" class="myForm" method="POST" #f="ngForm" (submit)="f.form.valid && get_prediction()" >
   <mat-card class="myCard">
       <mat-form-field class="field">
       <mat-select placeholder="Gender" required [(ngModel)]="user.gender" name="gender" #name="ngModel">
@@ -85,10 +85,10 @@
       </mat-select>
     </mat-form-field>
     <br>
-    <button class="btn btn-primary" type="submit" name="send_request" >Submit</button>
+    <button id="submitBtn"class="btn btn-primary" type="submit" name="send_request"  >Submit</button>
+   
   </mat-card>
 </form>
-
 
 
 

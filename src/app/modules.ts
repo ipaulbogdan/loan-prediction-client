@@ -15,12 +15,6 @@ export class User{
     
 }
 
-
-export interface predictionResponse{
-    response: string;
-    accurracy: string;
-}
-
 export class RequestResponse{
     response : string;
     acc : number;
