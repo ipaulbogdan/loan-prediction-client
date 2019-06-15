@@ -21,7 +21,7 @@ export class GetPredictionComponent implements OnInit {
   
   get_prediction(){
     console.log(this.user);
-    this.http.post('http://localhost:8080/api/loan/predict',this.user).subscribe(
+    this.http.post('http://localhost:8080/loanService/loan/predict',this.user).subscribe(
       (res : RequestResponse)=>{
         console.log(res);
         this.openDialog(res);  

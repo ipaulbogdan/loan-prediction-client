@@ -13,8 +13,8 @@ import { ResponsePopupComponent } from './response-popup/response-popup.componen
 
 
 const appRoutes: Routes=[
-  {path:'predict', component: GetPredictionComponent},
-  {path:'', redirectTo: 'predict',pathMatch:'full'}
+  {path:'predict', component:GetPredictionComponent},
+  {path:'', component:GetPredictionComponent,pathMatch:'full'}
 ]
 
 

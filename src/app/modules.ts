@@ -17,5 +17,5 @@ export class User{
 
 export class RequestResponse{
     response : string;
-    acc : number;
+    accuracy : number;
 }
